@@ -5,3 +5,9 @@ autom4te.cache
 stamp-h1
 config.status
 config.log
+intl/Makefile
+po/Makefile.in
+scripts/Makefile
+po/POTFILES
+po/Makefile
+Makefile
