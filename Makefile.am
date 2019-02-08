@@ -95,7 +95,7 @@ AM_CPPFLAGS = $(WARNING_CFLAGS) -I$(top_srcdir)/include \
 	-DKQ_DATA=\"$(pkgdatadir)\" \
 	-DKQ_LIB=\"$(pkglibdir)\" \
 	-DKQ_LOCALE=\"$(localedir)\" \
-	-Iintl -I$(top_srcdir)/intl
+	-Iintl -I$(top_srcdir)/intl -I/usr/include/lua5.3
 
 if BUNDLE
 all-local: KQ.app

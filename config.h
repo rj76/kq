@@ -1,345 +1,346 @@
+/* config.h.  Generated from config.h.in by configure.  */
 /* config.h.in.  Generated from configure.ac by autoheader.  */
 
 /* Define to one of `_getb67', `GETB67', `getb67' for Cray-2 and Cray-YMP
    systems. This function is required for `alloca.c' support on those systems.
    */
-#undef CRAY_STACKSEG_END
+/* #undef CRAY_STACKSEG_END */
 
 /* Define to 1 if using `alloca.c'. */
-#undef C_ALLOCA
+/* #undef C_ALLOCA */
 
 /* Some debug options */
-#undef DEBUGMODE
+/* #undef DEBUGMODE */
 
 /* Define to 1 if translation of program messages to the user's native
    language is requested. */
-#undef ENABLE_NLS
+#define ENABLE_NLS 1
 
 /* Define to 1 if you have `alloca', as a function or macro. */
-#undef HAVE_ALLOCA
+#define HAVE_ALLOCA 1
 
 /* Define to 1 if you have <alloca.h> and it should be used (not on Ultrix).
    */
-#undef HAVE_ALLOCA_H
+#define HAVE_ALLOCA_H 1
 
 /* Define to 1 if you have the `argz_count' function. */
-#undef HAVE_ARGZ_COUNT
+#define HAVE_ARGZ_COUNT 1
 
 /* Define to 1 if you have the <argz.h> header file. */
-#undef HAVE_ARGZ_H
+#define HAVE_ARGZ_H 1
 
 /* Define to 1 if you have the `argz_next' function. */
-#undef HAVE_ARGZ_NEXT
+#define HAVE_ARGZ_NEXT 1
 
 /* Define to 1 if you have the `argz_stringify' function. */
-#undef HAVE_ARGZ_STRINGIFY
+#define HAVE_ARGZ_STRINGIFY 1
 
 /* Define to 1 if you have the `asprintf' function. */
-#undef HAVE_ASPRINTF
+#define HAVE_ASPRINTF 1
 
 /* Define to 1 if you have the `atexit' function. */
-#undef HAVE_ATEXIT
+#define HAVE_ATEXIT 1
 
 /* Define to 1 if the compiler understands __builtin_expect. */
-#undef HAVE_BUILTIN_EXPECT
+#define HAVE_BUILTIN_EXPECT 1
 
 /* Define to 1 if you have the Mac OS X function CFLocaleCopyCurrent in the
    CoreFoundation framework. */
-#undef HAVE_CFLOCALECOPYCURRENT
+/* #undef HAVE_CFLOCALECOPYCURRENT */
 
 /* Define to 1 if you have the Mac OS X function CFPreferencesCopyAppValue in
    the CoreFoundation framework. */
-#undef HAVE_CFPREFERENCESCOPYAPPVALUE
+/* #undef HAVE_CFPREFERENCESCOPYAPPVALUE */
 
 /* Define if the GNU dcgettext() function is already present or preinstalled.
    */
-#undef HAVE_DCGETTEXT
+#define HAVE_DCGETTEXT 1
 
 /* Define to 1 if you have the declaration of `feof_unlocked', and to 0 if you
    don't. */
-#undef HAVE_DECL_FEOF_UNLOCKED
+#define HAVE_DECL_FEOF_UNLOCKED 1
 
 /* Define to 1 if you have the declaration of `fgets_unlocked', and to 0 if
    you don't. */
-#undef HAVE_DECL_FGETS_UNLOCKED
+#define HAVE_DECL_FGETS_UNLOCKED 1
 
 /* Define to 1 if you have the declaration of `getc_unlocked', and to 0 if you
    don't. */
-#undef HAVE_DECL_GETC_UNLOCKED
+#define HAVE_DECL_GETC_UNLOCKED 1
 
 /* Define to 1 if you have the declaration of `_snprintf', and to 0 if you
    don't. */
-#undef HAVE_DECL__SNPRINTF
+#define HAVE_DECL__SNPRINTF 0
 
 /* Define to 1 if you have the declaration of `_snwprintf', and to 0 if you
    don't. */
-#undef HAVE_DECL__SNWPRINTF
+#define HAVE_DECL__SNWPRINTF 0
 
 /* Define to 1 if you have the <features.h> header file. */
-#undef HAVE_FEATURES_H
+#define HAVE_FEATURES_H 1
 
 /* Define to 1 if you have the `fwprintf' function. */
-#undef HAVE_FWPRINTF
+#define HAVE_FWPRINTF 1
 
 /* Define to 1 if you have the `getcwd' function. */
-#undef HAVE_GETCWD
+#define HAVE_GETCWD 1
 
 /* Define to 1 if you have the `getegid' function. */
-#undef HAVE_GETEGID
+#define HAVE_GETEGID 1
 
 /* Define to 1 if you have the `geteuid' function. */
-#undef HAVE_GETEUID
+#define HAVE_GETEUID 1
 
 /* Define to 1 if you have the `getgid' function. */
-#undef HAVE_GETGID
+#define HAVE_GETGID 1
 
 /* Define to 1 if you have the `getlocalename_l' function. */
-#undef HAVE_GETLOCALENAME_L
+/* #undef HAVE_GETLOCALENAME_L */
 
 /* Define to 1 if you have the `getpagesize' function. */
-#undef HAVE_GETPAGESIZE
+#define HAVE_GETPAGESIZE 1
 
 /* Define if the GNU gettext() function is already present or preinstalled. */
-#undef HAVE_GETTEXT
+#define HAVE_GETTEXT 1
 
 /* Define to 1 if you have the `gettimeofday' function. */
-#undef HAVE_GETTIMEOFDAY
+#define HAVE_GETTIMEOFDAY 1
 
 /* Define to 1 if you have the `getuid' function. */
-#undef HAVE_GETUID
+#define HAVE_GETUID 1
 
 /* Define if you have the iconv() function and it works. */
-#undef HAVE_ICONV
+#define HAVE_ICONV 1
 
 /* Define if you have the 'intmax_t' type in <stdint.h> or <inttypes.h>. */
-#undef HAVE_INTMAX_T
+#define HAVE_INTMAX_T 1
 
 /* Define to 1 if you have the <inttypes.h> header file. */
-#undef HAVE_INTTYPES_H
+#define HAVE_INTTYPES_H 1
 
 /* Define if <inttypes.h> exists, doesn't clash with <sys/types.h>, and
    declares uintmax_t. */
-#undef HAVE_INTTYPES_H_WITH_UINTMAX
+#define HAVE_INTTYPES_H_WITH_UINTMAX 1
 
 /* Define if you have <langinfo.h> and nl_langinfo(CODESET). */
-#undef HAVE_LANGINFO_CODESET
+#define HAVE_LANGINFO_CODESET 1
 
 /* Define if your <locale.h> file defines LC_MESSAGES. */
-#undef HAVE_LC_MESSAGES
+#define HAVE_LC_MESSAGES 1
 
 /* Define to 1 if you have the <limits.h> header file. */
-#undef HAVE_LIMITS_H
+#define HAVE_LIMITS_H 1
 
 /* Define to 1 if the system has the type 'long long int'. */
-#undef HAVE_LONG_LONG_INT
+#define HAVE_LONG_LONG_INT 1
 
 /* Define to 1 if you have the <lua50/lua.h> header file. */
-#undef HAVE_LUA50_LUA_H
+/* #undef HAVE_LUA50_LUA_H */
 
 /* Define to 1 if you have the <lua5.1/lua.h> header file. */
-#undef HAVE_LUA5_1_LUA_H
+/* #undef HAVE_LUA5_1_LUA_H */
 
 /* Define to 1 if you have the <lua5.2/lua.h> header file. */
-#undef HAVE_LUA5_2_LUA_H
+/* #undef HAVE_LUA5_2_LUA_H */
 
 /* Define to 1 if you have the <lua5.3/lua.h> header file. */
-#undef HAVE_LUA5_3_LUA_H
+#define HAVE_LUA5_3_LUA_H 1
 
 /* Define to 1 if you have the <lua.h> header file. */
-#undef HAVE_LUA_H
+/* #undef HAVE_LUA_H */
 
 /* Define to 1 if you have the `mbrtowc' function. */
-#undef HAVE_MBRTOWC
+#define HAVE_MBRTOWC 1
 
 /* Define to 1 if you have the `memmove' function. */
-#undef HAVE_MEMMOVE
+#define HAVE_MEMMOVE 1
 
 /* Define to 1 if you have the <memory.h> header file. */
-#undef HAVE_MEMORY_H
+#define HAVE_MEMORY_H 1
 
 /* Define to 1 if you have the `mempcpy' function. */
-#undef HAVE_MEMPCPY
+#define HAVE_MEMPCPY 1
 
 /* Define to 1 if you have the `memset' function. */
-#undef HAVE_MEMSET
+#define HAVE_MEMSET 1
 
 /* Define to 1 if you have the `mkdir' function. */
-#undef HAVE_MKDIR
+#define HAVE_MKDIR 1
 
 /* Define to 1 if you have a working `mmap' system call. */
-#undef HAVE_MMAP
+#define HAVE_MMAP 1
 
 /* Define to 1 if you have the `munmap' function. */
-#undef HAVE_MUNMAP
+#define HAVE_MUNMAP 1
 
 /* Define to 1 if you have the `newlocale' function. */
-#undef HAVE_NEWLOCALE
+#define HAVE_NEWLOCALE 1
 
 /* Define if your printf() function supports format strings with positions. */
-#undef HAVE_POSIX_PRINTF
+#define HAVE_POSIX_PRINTF 1
 
 /* Define to 1 if you have the `pow' function. */
-#undef HAVE_POW
+/* #undef HAVE_POW */
 
 /* Define if the <pthread.h> defines PTHREAD_MUTEX_RECURSIVE. */
-#undef HAVE_PTHREAD_MUTEX_RECURSIVE
+#define HAVE_PTHREAD_MUTEX_RECURSIVE 1
 
 /* Define if the POSIX multithreading library has read/write locks. */
-#undef HAVE_PTHREAD_RWLOCK
+#define HAVE_PTHREAD_RWLOCK 1
 
 /* Define to 1 if you have the `putenv' function. */
-#undef HAVE_PUTENV
+#define HAVE_PUTENV 1
 
 /* Define to 1 if you have the `setenv' function. */
-#undef HAVE_SETENV
+#define HAVE_SETENV 1
 
 /* Define to 1 if you have the `setlocale' function. */
-#undef HAVE_SETLOCALE
+#define HAVE_SETLOCALE 1
 
 /* Define to 1 if you have the `snprintf' function. */
-#undef HAVE_SNPRINTF
+#define HAVE_SNPRINTF 1
 
 /* Define to 1 if you have the <stddef.h> header file. */
-#undef HAVE_STDDEF_H
+#define HAVE_STDDEF_H 1
 
 /* Define to 1 if you have the <stdint.h> header file. */
-#undef HAVE_STDINT_H
+#define HAVE_STDINT_H 1
 
 /* Define if <stdint.h> exists, doesn't clash with <sys/types.h>, and declares
    uintmax_t. */
-#undef HAVE_STDINT_H_WITH_UINTMAX
+#define HAVE_STDINT_H_WITH_UINTMAX 1
 
 /* Define to 1 if you have the <stdlib.h> header file. */
-#undef HAVE_STDLIB_H
+#define HAVE_STDLIB_H 1
 
 /* Define to 1 if you have the `stpcpy' function. */
-#undef HAVE_STPCPY
+#define HAVE_STPCPY 1
 
 /* Define to 1 if you have the `strcasecmp' function. */
-#undef HAVE_STRCASECMP
+#define HAVE_STRCASECMP 1
 
 /* Define to 1 if you have the `strchr' function. */
-#undef HAVE_STRCHR
+#define HAVE_STRCHR 1
 
 /* Define to 1 if you have the `strdup' function. */
-#undef HAVE_STRDUP
+#define HAVE_STRDUP 1
 
 /* Define to 1 if you have the <strings.h> header file. */
-#undef HAVE_STRINGS_H
+#define HAVE_STRINGS_H 1
 
 /* Define to 1 if you have the <string.h> header file. */
-#undef HAVE_STRING_H
+#define HAVE_STRING_H 1
 
 /* Define to 1 if you have the `strnlen' function. */
-#undef HAVE_STRNLEN
+#define HAVE_STRNLEN 1
 
 /* Define to 1 if you have the `strstr' function. */
-#undef HAVE_STRSTR
+#define HAVE_STRSTR 1
 
 /* Define to 1 if you have the `strtoul' function. */
-#undef HAVE_STRTOUL
+#define HAVE_STRTOUL 1
 
 /* Define to 1 if you have the `symlink' function. */
-#undef HAVE_SYMLINK
+#define HAVE_SYMLINK 1
 
 /* Define to 1 if you have the <sys/param.h> header file. */
-#undef HAVE_SYS_PARAM_H
+#define HAVE_SYS_PARAM_H 1
 
 /* Define to 1 if you have the <sys/select.h> header file. */
-#undef HAVE_SYS_SELECT_H
+#define HAVE_SYS_SELECT_H 1
 
 /* Define to 1 if you have the <sys/stat.h> header file. */
-#undef HAVE_SYS_STAT_H
+#define HAVE_SYS_STAT_H 1
 
 /* Define to 1 if you have the <sys/time.h> header file. */
-#undef HAVE_SYS_TIME_H
+#define HAVE_SYS_TIME_H 1
 
 /* Define to 1 if you have the <sys/types.h> header file. */
-#undef HAVE_SYS_TYPES_H
+#define HAVE_SYS_TYPES_H 1
 
 /* Define to 1 if you have the `tsearch' function. */
-#undef HAVE_TSEARCH
+#define HAVE_TSEARCH 1
 
 /* Define if you have the 'uintmax_t' type in <stdint.h> or <inttypes.h>. */
-#undef HAVE_UINTMAX_T
+#define HAVE_UINTMAX_T 1
 
 /* Define to 1 if you have the <unistd.h> header file. */
-#undef HAVE_UNISTD_H
+#define HAVE_UNISTD_H 1
 
 /* Define to 1 if the system has the type 'unsigned long long int'. */
-#undef HAVE_UNSIGNED_LONG_LONG_INT
+#define HAVE_UNSIGNED_LONG_LONG_INT 1
 
 /* Define to 1 if you have the `uselocale' function. */
-#undef HAVE_USELOCALE
+#define HAVE_USELOCALE 1
 
 /* Define to 1 or 0, depending whether the compiler supports simple visibility
    declarations. */
-#undef HAVE_VISIBILITY
+#define HAVE_VISIBILITY 1
 
 /* Define if you have the 'wchar_t' type. */
-#undef HAVE_WCHAR_T
+#define HAVE_WCHAR_T 1
 
 /* Define to 1 if you have the `wcrtomb' function. */
-#undef HAVE_WCRTOMB
+#define HAVE_WCRTOMB 1
 
 /* Define to 1 if you have the `wcslen' function. */
-#undef HAVE_WCSLEN
+#define HAVE_WCSLEN 1
 
 /* Define to 1 if you have the `wcsnlen' function. */
-#undef HAVE_WCSNLEN
+#define HAVE_WCSNLEN 1
 
 /* Define if you have the 'wint_t' type. */
-#undef HAVE_WINT_T
+#define HAVE_WINT_T 1
 
 /* Define to 1 if O_NOATIME works. */
-#undef HAVE_WORKING_O_NOATIME
+#define HAVE_WORKING_O_NOATIME 1
 
 /* Define to 1 if O_NOFOLLOW works. */
-#undef HAVE_WORKING_O_NOFOLLOW
+#define HAVE_WORKING_O_NOFOLLOW 1
 
 /* Define to 1 if you have the `__fsetlocking' function. */
-#undef HAVE___FSETLOCKING
+#define HAVE___FSETLOCKING 1
 
 /* Define as const if the declaration of iconv() needs const. */
-#undef ICONV_CONST
+#define ICONV_CONST 
 
 /* Define if integer division by zero raises signal SIGFPE. */
-#undef INTDIV0_RAISES_SIGFPE
+#define INTDIV0_RAISES_SIGFPE 1
 
 /* Add some code to allow the player to cheat */
-#undef KQ_CHEATS
+/* #undef KQ_CHEATS */
 
 /* Name of package */
-#undef PACKAGE
+#define PACKAGE "kq"
 
 /* Define to the address where bug reports for this package should be sent. */
-#undef PACKAGE_BUGREPORT
+#define PACKAGE_BUGREPORT "peterhull90@users.sourceforge.net"
 
 /* Define to the full name of this package. */
-#undef PACKAGE_NAME
+#define PACKAGE_NAME "KQ"
 
 /* Define to the full name and version of this package. */
-#undef PACKAGE_STRING
+#define PACKAGE_STRING "KQ 0.99"
 
 /* Define to the one symbol short name of this package. */
-#undef PACKAGE_TARNAME
+#define PACKAGE_TARNAME "kq"
 
 /* Define to the home page for this package. */
-#undef PACKAGE_URL
+#define PACKAGE_URL ""
 
 /* Define to the version of this package. */
-#undef PACKAGE_VERSION
+#define PACKAGE_VERSION "0.99"
 
 /* Define if <inttypes.h> exists and defines unusable PRI* macros. */
-#undef PRI_MACROS_BROKEN
+/* #undef PRI_MACROS_BROKEN */
 
 /* Define if the pthread_in_use() detection is hard. */
-#undef PTHREAD_IN_USE_DETECTION_HARD
+/* #undef PTHREAD_IN_USE_DETECTION_HARD */
 
 /* Define as the maximum value of type 'size_t', if the system doesn't define
    it. */
 #ifndef SIZE_MAX
-# undef SIZE_MAX
+/* # undef SIZE_MAX */
 #endif
 
 /* If using the C implementation of alloca, define if you know the
@@ -348,78 +349,78 @@
 	STACK_DIRECTION > 0 => grows toward higher addresses
 	STACK_DIRECTION < 0 => grows toward lower addresses
 	STACK_DIRECTION = 0 => direction of growth unknown */
-#undef STACK_DIRECTION
+/* #undef STACK_DIRECTION */
 
 /* Define to 1 if you have the ANSI C header files. */
-#undef STDC_HEADERS
+#define STDC_HEADERS 1
 
 /* Define to 1 if you can safely include both <sys/time.h> and <time.h>. */
-#undef TIME_WITH_SYS_TIME
+#define TIME_WITH_SYS_TIME 1
 
 /* Define to 1 if your <sys/time.h> declares `struct tm'. */
-#undef TM_IN_SYS_TIME
+/* #undef TM_IN_SYS_TIME */
 
 /* Define if the POSIX multithreading library can be used. */
-#undef USE_POSIX_THREADS
+#define USE_POSIX_THREADS 1
 
 /* Define if references to the POSIX multithreading library should be made
    weak. */
-#undef USE_POSIX_THREADS_WEAK
+#define USE_POSIX_THREADS_WEAK 1
 
 /* Define if the GNU Pth multithreading library can be used. */
-#undef USE_PTH_THREADS
+/* #undef USE_PTH_THREADS */
 
 /* Define if references to the GNU Pth multithreading library should be made
    weak. */
-#undef USE_PTH_THREADS_WEAK
+/* #undef USE_PTH_THREADS_WEAK */
 
 /* Define if the old Solaris multithreading library can be used. */
-#undef USE_SOLARIS_THREADS
+/* #undef USE_SOLARIS_THREADS */
 
 /* Define if references to the old Solaris multithreading library should be
    made weak. */
-#undef USE_SOLARIS_THREADS_WEAK
+/* #undef USE_SOLARIS_THREADS_WEAK */
 
 /* Enable extensions on AIX 3, Interix.  */
 #ifndef _ALL_SOURCE
-# undef _ALL_SOURCE
+# define _ALL_SOURCE 1
 #endif
 /* Enable GNU extensions on systems that have them.  */
 #ifndef _GNU_SOURCE
-# undef _GNU_SOURCE
+# define _GNU_SOURCE 1
 #endif
 /* Enable threading extensions on Solaris.  */
 #ifndef _POSIX_PTHREAD_SEMANTICS
-# undef _POSIX_PTHREAD_SEMANTICS
+# define _POSIX_PTHREAD_SEMANTICS 1
 #endif
 /* Enable extensions on HP NonStop.  */
 #ifndef _TANDEM_SOURCE
-# undef _TANDEM_SOURCE
+# define _TANDEM_SOURCE 1
 #endif
 /* Enable general extensions on Solaris.  */
 #ifndef __EXTENSIONS__
-# undef __EXTENSIONS__
+# define __EXTENSIONS__ 1
 #endif
 
 
 /* Define if the native Windows multithreading API can be used. */
-#undef USE_WINDOWS_THREADS
+/* #undef USE_WINDOWS_THREADS */
 
 /* Version number of package */
-#undef VERSION
+#define VERSION "0.99"
 
 /* Define to 1 if on MINIX. */
-#undef _MINIX
+/* #undef _MINIX */
 
 /* Define to 2 if the system does not provide POSIX.1 features except with
    this defined. */
-#undef _POSIX_1_SOURCE
+/* #undef _POSIX_1_SOURCE */
 
 /* Define to 1 if you need to in order for `stat' and other things to work. */
-#undef _POSIX_SOURCE
+/* #undef _POSIX_SOURCE */
 
 /* Define to empty if `const' does not conform to ANSI C. */
-#undef const
+/* #undef const */
 
 /* Please see the Gnulib manual for how to use these macros.
 
@@ -537,23 +538,23 @@
 /* Define to `__inline__' or `__inline' if that's what the C compiler
    calls it, or to nothing if 'inline' is not supported under any name.  */
 #ifndef __cplusplus
-#undef inline
+/* #undef inline */
 #endif
 
 /* Define as the type of the result of subtracting two pointers, if the system
    doesn't define it. */
-#undef ptrdiff_t
+/* #undef ptrdiff_t */
 
 /* Define to `unsigned int' if <sys/types.h> does not define. */
-#undef size_t
+/* #undef size_t */
 
 /* Define to unsigned long or unsigned long long if <stdint.h> and
    <inttypes.h> don't define. */
-#undef uintmax_t
+/* #undef uintmax_t */
 
 /* Define to empty if the keyword `volatile' does not work. Warning: valid
    code using `volatile' can become incorrect without. Disable with care. */
-#undef volatile
+/* #undef volatile */
 
 
 #define __libc_lock_t                   gl_lock_t

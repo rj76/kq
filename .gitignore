@@ -1,0 +1,7 @@
+scripts/*.lob
+*.o
+.deps
+autom4te.cache
+stamp-h1
+config.status
+config.log

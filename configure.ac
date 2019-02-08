@@ -30,14 +30,14 @@ echo bar
 ALLEGRO_LIBS="-L${ALLEGRO_CONFIG_prefix}/lib"
 ],[
 echo foo
-AC_CHECK_PROG([HAVE_ALLEGRO], [allegro-config], [yes])
+AC_CHECK_PROG([HAVE_ALLEGRO], [pkg-config --libs allegro-5], [yes])
 ])
 if test "${HAVE_ALLEGRO}" == "yes" ; then
-  ALLEGRO_LIBS=`allegro-config --libs`
+  ALLEGRO_LIBS=`pkg-config --libs allegro-5`
 else
   # there is no allegro-config under windows
-  AC_CHECK_LIB(alleg, create_bitmap, [HAVE_ALLEGRO=yes], [], [$ALLEGRO_LIBS])
-  ALLEGRO_LIBS="${ALLEGRO_LIBS} -lalleg"
+  AC_CHECK_LIB(allegro, create_bitmap, [HAVE_ALLEGRO=yes], [], [$ALLEGRO_LIBS])
+  ALLEGRO_LIBS="${ALLEGRO_LIBS} -lallegro"
 fi
 if test "${HAVE_ALLEGRO}" != "yes" ; then
   AC_MSG_ERROR([Allegro not found])
@@ -50,8 +50,12 @@ AC_CHECK_HEADERS([stdlib.h string.h sys/time.h unistd.h sys/select.h])
 AC_CHECK_HEADERS(
   [lua50/lua.h], , [AC_CHECK_HEADERS(
     [lua5.1/lua.h], , [AC_CHECK_HEADERS(
-      [lua.h], , [AC_MSG_ERROR(
-        [Lua not found]
+      [lua5.2/lua.h], , [AC_CHECK_HEADERS(
+        [lua5.3/lua.h], , [AC_CHECK_HEADERS(
+          [lua.h], , [AC_MSG_ERROR(
+            [Lua not found]
+          )]
+        )]
       )]
     )]
   )]
@@ -74,7 +78,7 @@ WARNING_CFLAGS="-Wall -Wextra -Wfloat-equal -Wredundant-decls \
 # -Wswitch-default -Wlarger-than-65500 -Wshadow
 kq_save_CFLAGS="$CFLAGS"
 CFLAGS="$CFLAGS $WARNING_CFLAGS"
-AC_COMPILE_IFELSE(AC_LANG_PROGRAM, [], [WARNING_CFLAGS=""])
+AC_COMPILE_IFELSE([AC_LANG_SOURCE([int main() { return 0; }])], [], [WARNING_CFLAGS=""])
 CFLAGS="$kq_save_CFLAGS"
 AC_SUBST(WARNING_CFLAGS)
 
@@ -83,7 +87,7 @@ AC_CHECK_FUNCS([atexit gettimeofday memmove memset mkdir pow strchr strstr])
 AC_CHECK_LIB(dumb, dumb_exit, [ALLEGRO_LIBS="-ldumb $ALLEGRO_LIBS"], [AC_MSG_ERROR([Dumb not found])])
 AX_CHECK_ALDUMB([ALLEGRO_LIBS="-laldmb $ALLEGRO_LIBS"], [AC_MSG_ERROR([Aldumb not found])], [$ALLEGRO_LIBS])
 AC_SEARCH_LIBS(sqrt, m)
-AC_SEARCH_LIBS(lua_gettop, lua50 lua5.1 lua, [], [AC_MSG_ERROR([Lua not found])])
+AC_SEARCH_LIBS(lua_gettop, lua50 lua5.1 lua5.2 lua5.3 lua, [], [AC_MSG_ERROR([Lua not found])])
 
 PKG_CHECK_MODULES(GTK, [gtk+-2.0 >= 2.8.0 libglade-2.0 >= 2.4.0],
   [AC_SUBST(GTK_LIBS)
