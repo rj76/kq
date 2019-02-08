@@ -1,6 +1,7 @@
 scripts/*.lob
 *.o
 .deps
+config.h
 autom4te.cache
 stamp-h1
 config.status
