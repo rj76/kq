@@ -24,10 +24,12 @@ above. Most of our work was done with the GCC compiler (also known as
 MinGW on Windows, DJGPP on DOS). The code should compile on Microsoft
 Visual C, but we haven't any project files for it.
 
-apt-get install liballegro5-dev
+Ubuntu:
+--------
+apt-get install liballegro4-dev
 apt-get install libaldmb1-dev
 apt install liblua5.3-dev
-apt install lua5.2
+apt install lua5.3
 
 On Windows:
 ----------
