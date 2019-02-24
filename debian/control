@@ -1,0 +1,8 @@
+Package: kq
+Version: 1.0
+Section: base
+Priority: optional
+Architecture: all
+Depends: liballegro4-dev, libaldmb1-dev, liblua5.3-dev, lua5.3
+Maintainer: Richard Jansen <humanications@gmail.com>
+Description: KQ - the console-style roleplaying game
