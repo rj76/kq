@@ -74,6 +74,8 @@
 #define LUA_PLR_KEY "_obj"
 #define NUM_IFUNCS   142
 
+#define luaL_reg      luaL_Reg
+
 /*struct luaL_reg
 {
    const char *name;
@@ -654,7 +656,7 @@ void do_luainit (const char *fname, int global)
       do_luakill ();
    }
    /* In Lua 5.1, this is a compatibility #define to luaL_newstate */
-   theL = lua_open ();
+   theL = luaL_newstate ();
    if (theL == NULL)
       program_death (_("Could not initialise scripting engine"));
    fieldsort ();
@@ -1091,7 +1093,7 @@ static int KQ_add_special_item (lua_State * L)
       quantity = lua_tonumber (L, 2);
    else
       quantity = 1;
-   
+
    player_special_items[index] += quantity;
    return 0;
 
@@ -1099,7 +1101,7 @@ static int KQ_add_special_item (lua_State * L)
 
 
    player_special_items[num_special_items] = index;
-   
+
 
    table_name = lua_tostring (L, 1);
 
@@ -1112,17 +1114,17 @@ static int KQ_add_special_item (lua_State * L)
    lua_pushstring(L, "index"); // now the string "index" is just above the table on the stack
    lua_gettable(L, -2); // finds the table foo in stack position -2, pops "bar" off the stack, pushes on foo["bar"]
    index = lua_tonumber(L, -1);
-   
+
    lua_getglobal(L, table_name);
    lua_pushstring(L, "name");
    lua_gettable(L, -2);
    name = lua_tostring (L, -1);
-   
+
    lua_getglobal(L, table_name);
    lua_pushstring(L, "description");
    lua_gettable(L, -2);
    description = lua_tostring (L, -1);
-   
+
    lua_getglobal(L, table_name);
    lua_pushstring(L, "icon");
    lua_gettable(L, -2);
@@ -1176,9 +1178,9 @@ static int KQ_remove_special_item (lua_State * L)
 #if 0
 void add_special_item (int index, int quantity)
 {
-   
-   
-   
+
+
+
 }
 
 
@@ -4074,7 +4076,7 @@ int lua_dofile (lua_State * L, const char * fname)
       }
    }
 
-   if ((lua_load (L, (lua_Chunkreader) filereader, f, filename)) != 0) {
+   if ((lua_load (L, (lua_Reader) filereader, f, filename, NULL)) != 0) {
       allegro_message (_("Could not parse script %s!"), filename);
       pack_fclose (f);
       return 1;
@@ -4093,7 +4095,7 @@ int lua_dofile (lua_State * L, const char * fname)
  *
  * Take the given string and execute it.
  * Prints out any returned values to the console
- * 
+ *
  * \param L the Lua state
  * \param cmd the string to execute
  */
@@ -4101,7 +4103,7 @@ static int kq_dostring (lua_State * L, const char *cmd)
 {
    int retval, nrets, i;
    nrets = lua_gettop(L);
-   retval = lua_load (L, (lua_Chunkreader) stringreader, &cmd, "<console>");
+   retval = lua_load (L, (lua_Reader) stringreader, &cmd, "<console>", NULL);
    if (retval != 0) {
      scroll_console("Parse error");
      return retval;
@@ -4123,7 +4125,7 @@ static int kq_dostring (lua_State * L, const char *cmd)
  *
  * Take the given string and execute it.
  * Prints out any returned values to the console
- * 
+ *
  * \param cmd the string to execute
  */
 void do_console_command(const char* cmd) {
@@ -4138,7 +4140,7 @@ void do_console_command(const char* cmd) {
 /*! \brief Print text to the console
  *
  * Prints out the arg
- * 
+ *
  * \param L Lua state
  */
 int KQ_print(lua_State* L) {
