@@ -27,13 +27,13 @@ AC_ARG_WITH(allegro-prefix, AS_HELP_STRING([--with-allegro-prefix=DIR], [Prefix 
             ALLEGRO_CONFIG_prefix="$withval", ALLEGRO_CONFIG_prefix="")
 AS_IF([test x$ALLEGRO_CONFIG_prefix != x],[
 echo bar
-ALLEGRO_LIBS="-L${ALLEGRO_CONFIG_prefix}/lib"
+ALLEGRO_LIBS="-L${ALLEGRO_CONFIG_prefix}"
 ],[
 echo foo
-AC_CHECK_PROG([HAVE_ALLEGRO], [pkg-config --libs allegro-5], [yes])
+AC_CHECK_PROG([HAVE_ALLEGRO], [allegro-config --libs], [yes])
 ])
 if test "${HAVE_ALLEGRO}" == "yes" ; then
-  ALLEGRO_LIBS=`pkg-config --libs allegro-5`
+  ALLEGRO_LIBS=`allegro-config --libs`
 else
   # there is no allegro-config under windows
   AC_CHECK_LIB(allegro, create_bitmap, [HAVE_ALLEGRO=yes], [], [$ALLEGRO_LIBS])
