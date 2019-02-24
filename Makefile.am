@@ -21,7 +21,7 @@ kq_SOURCES = src/enemyc.c src/intrface.c src/sgame.c src/bounds.c \
 	include/bounds.h include/gettext.h include/console.h
 
 EXTRA_kq_SOURCES = src/unix.c src/osx.m src/beos.c src/win.c src/dos.c src/winres.rc
-kq_LDADD = $(kq_extra_files) $(ALLEGRO_LIBS) $(LIBINTL)
+kq_LDADD = $(kq_extra_files) $(ALLEGRO_LIBS) $(LIBINTL) $(LUA_LIB)
 kq_DEPENDENCIES = $(kq_extra_files)
 
 mapdraw_SOURCES = maps/mapdata.c maps/mapdraw.h maps/mapedit.c \
@@ -95,7 +95,8 @@ AM_CPPFLAGS = $(WARNING_CFLAGS) -I$(top_srcdir)/include \
 	-DKQ_DATA=\"$(pkgdatadir)\" \
 	-DKQ_LIB=\"$(pkglibdir)\" \
 	-DKQ_LOCALE=\"$(localedir)\" \
-	-Iintl -I$(top_srcdir)/intl -I/usr/include/lua5.3
+	-Iintl -I$(top_srcdir)/intl \
+	 $(LUA_INCLUDE)
 
 if BUNDLE
 all-local: KQ.app
